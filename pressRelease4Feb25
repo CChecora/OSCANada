@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O SCANada Press Release</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #d00;
+        }
+        .contact {
+            margin-bottom: 20px;
+        }
+        .content {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>O SCANada</h1>
+        <p class="contact"><strong>Cathy Checora, Independent Developer</strong><br>
+        Phone: 403 830 1958<br>
+        Email: <a href="mailto:oscanada.app@gmail.com">oscanada.app@gmail.com</a><br>
+        Date: February 4, 2025</p>
+        
+        <h2>FOR IMMEDIATE RELEASE</h2>
+        <h3>Calgary Mother of Two Creates ‘Buy Canadian’ App</h3>
+        <p>A smart phone app to help Canadians make a difference!</p>
+        
+        <p><strong>February 4, 2025 - CALGARY</strong> - Retired Calgary mother of two, Cathy Checora, has made an app for iPhone to help fellow Canadians identify products that are made in Canada. Named <strong>‘O SCANada’</strong>, it has just been published on the App Store on February 3, 2025.</p>
+        
+        <p>“Like you, I’ve been thinking about buying Canadian, and I’ve come up with an idea to help,” Checora says. “Inside the app, you can input the brand you’re interested in, or scan a UPC code, and receive the information. It’s easy to use and I’d love for you to take a look.”</p>
+        
+        <h3>A Family Affair</h3>
+        <p>O SCANada is a handcrafted app, made not by a corporation, but by a family of app ‘practitioners’. Mom, Cathy, a self-taught iOS programmer, has made the iPhone app, while her son Ryan, an alumnus of SAIT’s Software Programming program, is soon to release a Play Store version.</p>
+        
+        <p>“We believe O SCANada is one of the first apps available to dynamically deal with the issue of shopping Canadian.”</p>
+        
+        <p>“O SCANada is AI-powered, and this app shows how programmers can use AI in a positive way.”</p>
+        
+        <p>Just new on the App Store, O SCANada has early indications of being a popular and useful tool for the smartphone!</p>
+        
+        <p><strong>Contact me for more of the story:</strong> Cathy Checora, 403 830 1958 or <a href="mailto:oscanada.app@gmail.com">oscanada.app@gmail.com</a></p>
+    </div>
+</body>
+</html>
