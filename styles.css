@@ -72,6 +72,27 @@ a:hover {
   text-decoration: underline;
 }
 
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem;
+  background: #fff;
+  box-shadow: var(--shadow, 0 6px 18px rgba(0,0,0,.06));
+  margin: 1.25rem 0;
+}
+.card h2 { margin-top: 1.25rem; }
+.card h2:first-child { margin-top: 0; }
+.lang-label {
+  display: inline-block;
+  font-size: .85rem;
+  padding: .15rem .55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  margin-bottom: .75rem;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
 .hero {
   text-align: center;
   margin-bottom: 2.5rem;
