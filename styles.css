@@ -70,6 +70,32 @@ a:hover {
   text-decoration: underline;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 1.25rem;
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
