@@ -108,6 +108,7 @@ a:hover {
 }
 
 .card {
+  position: relative; 
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -131,6 +132,26 @@ a:hover {
 .hero p {
   max-width: 680px;
   margin: 0.75rem auto;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lang-switch:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  text-decoration: none;
 }
 
 .pill-nav {
