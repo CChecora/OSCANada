@@ -1,15 +1,21 @@
 :root {
-  --bg: #ffffff;
+  --bg: #f4f3ef;         
+  --card: #ffffff;
+  --muted-card: #f6f6f4;
+
   --text: #1f2937;
   --muted: #4b5563;
-  --border: #e5e7eb;
+  --border: rgba(100,116,139,.17);
 
   /* Canadian red accent */
   --accent: #c62828;
-  --accent-soft: #fdeaea;
+  --accent-soft: rgba(198, 40, 40, 0.10);
 
-  --radius: 10px;
+  --radius: 14px;        
+  --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+
   --max-width: 860px;
+  --transition: .25s ease;
 }
 
 * {
@@ -24,10 +30,15 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  background: var(--bg);
   color: var(--text);
   padding: 1.5rem;
   margin: 0;
+
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(198, 40, 40, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(0, 0, 0, 0.04), transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--muted-card) 40%, #ffffff 100%);
+  background-attachment: fixed;
 }
 
 main {
@@ -97,25 +108,15 @@ a:hover {
 }
 
 .card {
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem 1.25rem;
-  background: #fff;
-  box-shadow: var(--shadow, 0 6px 18px rgba(0,0,0,.06));
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 2vw, 26px);
   margin: 1.25rem 0;
 }
 .card h2 { margin-top: 1.25rem; }
 .card h2:first-child { margin-top: 0; }
-.lang-label {
-  display: inline-block;
-  font-size: .85rem;
-  padding: .15rem .55rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  margin-bottom: .75rem;
-  background: var(--accent-soft);
-  color: var(--text);
-}
 
 .h2-accent {
   border-left: 4px solid var(--accent);
@@ -151,6 +152,18 @@ a:hover {
 .pill-nav a:hover {
   background: var(--accent-soft);
   border-color: var(--accent);
+}
+
+.pill-nav a,
+.back-link {
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, .06);
+}
+
+.pill-nav a:hover,
+.back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(2, 6, 23, .12);
 }
 
 section {
