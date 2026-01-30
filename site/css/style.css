@@ -188,9 +188,7 @@ a:hover {
 
 .hero {
   padding: 96px 0 88px;
-  background:
-    radial-gradient(900px 400px at 15% -10%, var(--brand-soft), transparent),
-    radial-gradient(700px 300px at 85% 10%, rgba(200,16,46,0.12), transparent);
+  background: #ffffff;
 }
 
 .hero-inner {
