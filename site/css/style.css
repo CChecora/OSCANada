@@ -189,7 +189,8 @@ a:hover {
 
 .hero {
   padding: 96px 0 88px;
-  background: #ffffff;
+  /* background: #ffffff; */
+   background: limegreen; /* TEMP DEBUG */
 }
 
 .hero-inner {
