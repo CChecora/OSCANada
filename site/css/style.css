@@ -57,9 +57,10 @@ body {
 }
 
 .section.cta {
-  background: linear-gradient(135deg, var(--brand), #e11d48);
-  color: #fff;
+ background: #ffffff;
+  color: var(--text);
   text-align: center;
+  border-top: 1px solid var(--border);
 }
 
 h1, h2, h3 {
@@ -216,7 +217,8 @@ a:hover {
 
 .hero-card-top {
   height: 64px;
-  background: linear-gradient(135deg, var(--brand), #e11d48);
+  background: #f3f4f6; /* pale grey */
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-card-body {
@@ -289,7 +291,7 @@ a:hover {
 
 .section.cta h2,
 .section.cta p {
-  color: #fff;
+  color: var(--text);
 }
 
 .cta-inner {
