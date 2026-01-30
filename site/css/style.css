@@ -200,6 +200,11 @@ a:hover {
   justify-items: center;
 }
 
+.hero-copy {
+  text-align: center;
+  max-width: 720px;
+}
+
 .hero-actions,
 .cta-row {
   display: flex;
