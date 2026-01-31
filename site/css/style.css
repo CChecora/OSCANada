@@ -170,7 +170,7 @@ a:hover {
 }
 
 /* =========================
-   Buttons
+   Badges
 ========================= */
 
 .app-badges {
@@ -185,6 +185,28 @@ a:hover {
   height: 48px;
   width: auto;
 }
+
+.app-badges {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start; /* or center if your hero is centered */
+  margin-top: 24px;
+}
+
+.app-badges img {
+  height: 48px;   /* 👈 forces equal size */
+  width: auto;    /* preserves aspect ratio */
+  display: block;
+}
+
+.app-badges {
+  justify-content: center;
+}
+
+/* =========================
+   Buttons
+========================= */
 
 .btn {
   display: inline-block;
@@ -405,3 +427,4 @@ a:hover {
     gap: 12px;
   }
 }
+
