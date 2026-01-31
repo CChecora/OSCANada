@@ -199,7 +199,6 @@ a:hover {
 }
 
 .app-badges img {
-  height: 48px;              /* same height for both badges */
   width: auto;               /* preserve aspect ratio */
   display: block;
   transition: transform 0.15s ease;
@@ -222,10 +221,6 @@ a:hover {
 /* subtle hover lift */
 .app-badges a:hover img {
   transform: translateY(-1px);
-}
-
-.app-badges {
-  margin-left: 1.2em; /* matches bullet indent */
 }
 
 /* =========================
