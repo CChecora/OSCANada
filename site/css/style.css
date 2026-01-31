@@ -189,7 +189,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-top: 28px;
+   width: 100%; 
+  margin: 28px auto 0;
 }
 
 .app-badges a {
@@ -273,7 +274,7 @@ a:hover {
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid yellow; }  
+.app-badges { outline: 2px solid limegreen; }  
 
 /* =========================
    Hero
