@@ -204,13 +204,18 @@ a:hover {
 }
 
 .store-badge.google {
-  height: 72px;
+  height: 68px;
 }
 
 /* subtle hover lift */
 .app-badges a:hover img {
   transform: translateY(-1px);
 }
+
+.app-badges img {
+  outline: 4px solid hotpink;
+}
+
 /* =========================
    Buttons
 ========================= */
