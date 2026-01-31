@@ -111,9 +111,10 @@ font-size: 1.45rem;
   content: "•";
   position: absolute;
   left: 0;
-  color: rgba(0,0,0,0.4);
+  top: 0.6em;
+  transform: translateY(-50%);
+  color: currentColor;
   font-weight: 700;
-   font-size: 1.2em;
 }
 
 .fine {
