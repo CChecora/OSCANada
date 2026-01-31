@@ -204,7 +204,7 @@ a:hover {
 }
 
 .store-badge.google {
-  height: 68px;
+  height: 72px;
 }
 
 /* subtle hover lift */
@@ -213,7 +213,7 @@ a:hover {
 }
 
 .app-badges img {
-  outline: 4px solid hotpink;
+  outline: 4px solid limegreen;
 }
 
 /* =========================
