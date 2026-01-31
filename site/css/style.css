@@ -175,15 +175,21 @@ a:hover {
 
 .app-badges {
   display: flex;
-  gap: 16px;
-  justify-content: center;
+  justify-content: center;   /* center as a group */
+  align-items: center;       /* vertical alignment */
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.app-badges a {
+  display: flex;             /* fixes anchor baseline issues */
   align-items: center;
-  margin-top: 24px;
 }
 
 .app-badges img {
-  height: 48px;
-  width: auto;
+  height: 52px;              /* 👈 same height for both */
+  width: auto;               /* preserve aspect ratio */
+  display: block;
 }
 
 .app-badges {
@@ -202,6 +208,10 @@ a:hover {
 
 .app-badges {
   justify-content: center;
+}
+
+.app-badges a:hover img {
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -424,7 +434,7 @@ a:hover {
 @media (max-width: 600px) {
   .app-badges {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
 }
 
