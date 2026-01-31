@@ -148,6 +148,13 @@ a:hover {
   z-index: 100;
 }
 
+.nav .brand {
+  font-size: 1.4rem;   /* try 1.3–1.6rem */
+  font-weight: 800;
+  letter-spacing: 0.3px;
+   outline: 2px solid hotpink;
+}
+
 .nav-inner {
   display: flex;
   align-items: center;
@@ -261,12 +268,12 @@ a:hover {
 
 /* =========================
    Debug
-========================= */
+=========================
 
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid limegreen; }
+.app-badges { outline: 2px solid limegreen; }  */
 
 /* =========================
    Hero
@@ -484,6 +491,12 @@ a:hover {
 
   .shot-marquee {
     max-width: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav .brand {
+    font-size: 1.25rem;
   }
 }
 
