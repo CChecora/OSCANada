@@ -193,6 +193,15 @@ a:hover {
   transition: transform 0.15s ease;
 }
 
+/* Optical balancing for store badges */
+.store-badge.apple {
+  height: 48px;
+}
+
+.store-badge.google {
+  height: 52px;
+}
+
 /* subtle hover lift */
 .app-badges a:hover img {
   transform: translateY(-1px);
