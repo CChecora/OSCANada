@@ -96,7 +96,7 @@ p {
   list-style: none;
   padding: 0;
   margin: 20px 0 0;
-  font-size: 1.15rem; /* match .lead */
+font-size: 1.45rem;
   color: var(--muted);
 }
 
@@ -104,6 +104,7 @@ p {
   margin-bottom: 8px;
   position: relative;
   padding-left: 1.2em;
+   line-height: 1.4;
 }
 
 .lead-list li::before {
@@ -112,6 +113,7 @@ p {
   left: 0;
   color: var(--brand);
   font-weight: 700;
+   font-size: 1.2em;
 }
 
 .fine {
