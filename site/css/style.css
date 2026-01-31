@@ -105,7 +105,7 @@ p {
 }
 
 .lead-list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   position: relative;
   padding-left: 1.2em;
    line-height: 1.4;
@@ -179,8 +179,8 @@ a:hover {
 
 .app-badges {
   display: flex;
-  justify-content: center;   /* center as a group */
-  align-items: center;       /* vertical alignment */
+  justify-content: center;
+  align-items: center;
   gap: 16px;
   margin-top: 28px;
 }
@@ -219,12 +219,6 @@ a:hover {
 .app-badges {
   margin-left: 1.2em; /* matches bullet indent */
 }
-
-/*
-.app-badges img {
-  outline: 4px solid yellow;
-}
-*/
 
 /* =========================
    Buttons
@@ -271,7 +265,7 @@ a:hover {
 
 .hero-copy { outline: 2px solid hotpink; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid limegreen; }
+.app-badges { outline: 2px solid yellow; }
 
 /* =========================
    Hero
@@ -315,19 +309,15 @@ a:hover {
   margin: 0 auto;
 }
 
+.hero-copy h1 {
+  margin-bottom: 24px;
+}
+
 .hero-cta {
   display: flex;
   justify-content: flex-start;
   margin-top: 32px;
 }
-
-/* .hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 36px;
-  align-items: center;
-   outline: 2px solid yellow; 
-} */
 
 .hero-inner {
   display: grid;
