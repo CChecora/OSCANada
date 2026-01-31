@@ -179,10 +179,10 @@ a:hover {
 
 .app-badges {
   display: flex;
-  justify-content: flex-start;   /* center as a group */
+  justify-content: center;   /* center as a group */
   align-items: center;       /* vertical alignment */
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .app-badges a {
@@ -264,6 +264,14 @@ a:hover {
   padding: 14px 22px;
   font-size: 1.05rem;
 }
+
+/* =========================
+   Debug
+========================= */
+
+.hero-copy { outline: 2px solid hotpink; }
+.lead-list { outline: 2px solid deepskyblue; }
+.app-badges { outline: 2px solid limegreen; }
 
 /* =========================
    Hero
