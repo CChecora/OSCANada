@@ -92,6 +92,28 @@ p {
   max-width: 620px;
 }
 
+.lead-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  font-size: 1.15rem; /* match .lead */
+  color: var(--muted);
+}
+
+.lead-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.lead-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 700;
+}
+
 .fine {
   font-size: 0.9rem;
   color: var(--muted);
