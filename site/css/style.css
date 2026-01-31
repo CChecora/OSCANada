@@ -193,15 +193,10 @@ a:hover {
 }
 
 .hero-inner {
-   display: grid;
-  grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
   align-items: center;
-  justify-items: center;
-}
-
-.hero-copy {
-  text-align: center;
-  max-width: 720px;
 }
 
 .hero-actions,
