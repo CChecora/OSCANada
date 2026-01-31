@@ -204,11 +204,11 @@ a:hover {
 
 /* Optical balancing for store badges */
 .store-badge.apple {
-  height: 48px;
+  height: 96px;
 }
 
 .store-badge.google {
-  height: 72px;
+  height: 144px;
 }
 
 /* subtle hover lift */
@@ -266,7 +266,7 @@ a:hover {
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid limegreen; }
+.app-badges { outline: 2px solid yellow; }
 
 /* =========================
    Hero
