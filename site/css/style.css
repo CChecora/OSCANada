@@ -111,7 +111,7 @@ font-size: 1.45rem;
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--brand);
+  color: currentColor;
   font-weight: 700;
    font-size: 1.2em;
 }
@@ -376,5 +376,11 @@ a:hover {
   .footer-links {
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .lead-list {
+    font-size: 1.15rem;
   }
 }
