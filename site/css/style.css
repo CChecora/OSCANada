@@ -193,6 +193,11 @@ a:hover {
   transition: transform 0.15s ease;
 }
 
+.store-badge {
+  width: auto;
+  display: block;
+}
+
 /* Optical balancing for store badges */
 .store-badge.apple {
   height: 48px;
