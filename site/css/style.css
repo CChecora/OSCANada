@@ -111,7 +111,7 @@ font-size: 1.45rem;
   content: "•";
   position: absolute;
   left: 0;
-  color: currentColor;
+  color: rgba(0,0,0,0.4);
   font-weight: 700;
    font-size: 1.2em;
 }
