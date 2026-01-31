@@ -359,6 +359,61 @@ a:hover {
 }
 
 /* =========================
+   Infinite screenshots carousel
+========================= */
+
+.shots {
+  padding: 24px 0 64px; /* space under hero */
+}
+
+.shots-viewport {
+  overflow: hidden;
+  width: 100%;
+
+  /* optional: soft fade edges */
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.shots-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: shots-scroll 36s linear infinite;
+  will-change: transform;
+}
+
+.shot {
+  height: 520px;      /* desktop portrait size */
+  width: auto;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+/* seamless loop: move left by half the duplicated track */
+@keyframes shots-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* pause on hover (nice on desktop) */
+.shots-viewport:hover .shots-track {
+  animation-play-state: paused;
+}
+
+/* mobile sizing */
+@media (max-width: 600px) {
+  .shot { height: 420px; }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .shots-track { animation: none; }
+}
+
+/* =========================
    Cards & grids
 ========================= */
 
