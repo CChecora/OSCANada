@@ -264,8 +264,9 @@ a:hover {
 ========================= */
 
 .hero-copy { outline: 2px solid hotpink; }
+.hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid yellow; }
+.app-badges { outline: 2px solid limegreen; }
 
 /* =========================
    Hero
@@ -314,8 +315,9 @@ a:hover {
 }
 
 .hero-cta {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 32px;
 }
 
