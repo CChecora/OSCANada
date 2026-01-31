@@ -273,7 +273,7 @@ a:hover {
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid limegreen; }  
+.app-badges { outline: 2px solid yellow; }  
 
 /* =========================
    Hero
@@ -467,35 +467,11 @@ a:hover {
   .lead-list {
     font-size: 1.15rem;
   }
-}
-
-@media (max-width: 600px) {
-  .app-badges {
+   .app-badges {
     flex-direction: column;
     gap: 14px;
   }
-}
-
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-media {
-    margin-top: 32px;
-  }
-
-  .shot {
-    height: 420px;
-  }
-
-  .shot-marquee {
-    max-width: 360px;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav .brand {
+   .nav .brand {
     font-size: 1.25rem;
   }
 }
