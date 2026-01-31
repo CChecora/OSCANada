@@ -299,6 +299,8 @@ a:hover {
 
 .hero-copy {
   max-width: 720px;
+   text-align: center;
+  margin: 0 auto;
 }
 
 .hero-cta {
