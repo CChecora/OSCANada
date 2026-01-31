@@ -214,6 +214,8 @@ a:hover {
   transform: translateY(-1px);
 }
 
+.app-badges img { outline: 4px solid hotpink; }
+
 /* =========================
    Buttons
 ========================= */
