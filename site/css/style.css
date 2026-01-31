@@ -275,6 +275,7 @@ a:hover {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 36px;
   align-items: center;
+   outline: 2px solid hotpink; 
 }
 
 .hero-actions,
