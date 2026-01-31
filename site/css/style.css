@@ -95,8 +95,12 @@ p {
 .lead-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
-font-size: 1.45rem;
+
+  display: inline-block;     /* allows centering as a block */
+  text-align: left;          /* left-align bullet text */
+  margin: 24px auto 0;       /* center under the title */
+
+  font-size: 1.45rem;
   color: var(--muted);
 }
 
