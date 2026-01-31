@@ -173,6 +173,19 @@ a:hover {
    Buttons
 ========================= */
 
+.app-badges {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.app-badges img {
+  height: 48px;
+  width: auto;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 18px;
@@ -383,5 +396,12 @@ a:hover {
 @media (max-width: 600px) {
   .lead-list {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-badges {
+    flex-direction: column;
+    gap: 12px;
   }
 }
