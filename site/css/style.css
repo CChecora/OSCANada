@@ -270,14 +270,6 @@ a:hover {
   background: #ffffff;
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 36px;
-  align-items: center;
-   outline: 2px solid yellow; 
-}
-
 .hero-actions,
 .cta-row {
   display: flex;
@@ -305,10 +297,28 @@ a:hover {
    text-align: center;
 }
 
+.hero-copy {
+  max-width: 720px;
+}
+
 .hero-cta {
   display: flex;
   justify-content: flex-start;
   margin-top: 32px;
+}
+
+/* .hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+   outline: 2px solid yellow; 
+} */
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  align-items: center;
 }
 
 .pill {
