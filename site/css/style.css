@@ -468,9 +468,26 @@ a:hover {
     font-size: 1.15rem;
   }
 
+   /* Hero spacing */
+  .hero {
+    padding: 56px 0 48px;   /* was 96/88 */
+  }
+
+  /* Headline readability */
+  .hero-copy h1 {
+    font-size: clamp(2.0rem, 7vw, 2.6rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  /* Tighten spacing between list and badges */
   .app-badges {
-    flex-direction: column;
+    margin-top: 20px;       /* was 28px */
     gap: 14px;
+  }
+
+   .store-badge {
+    height: 56px;   /* if desktop is ~68px */
   }
 
   .nav .brand {
