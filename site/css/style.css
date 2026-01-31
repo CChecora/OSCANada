@@ -339,6 +339,77 @@ a:hover {
 }
 
 /* =========================
+   Hero screenshot carousel
+========================= */
+
+/* Right column wrapper */
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Viewport / mask */
+.shot-marquee {
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+
+  /* Soft fade edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* Moving strip */
+.shot-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: shot-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* Individual portrait screenshots */
+.shot {
+  height: 520px;          /* ideal for 6.9" portrait */
+  width: auto;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+/* Infinite loop animation */
+@keyframes shot-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.shot-marquee:hover .shot-track {
+  animation-play-state: paused;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .shot-track {
+    animation: none;
+  }
+}
+
+/* =========================
    Cards & grids
 ========================= */
 
