@@ -410,6 +410,36 @@ a:hover {
 }
 
 /* =========================
+   Snap strip
+========================= */
+
+.snap-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 18px;
+
+  overflow-x: auto;
+  padding: 6px 6px 12px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch; /* iOS smooth */
+}
+
+.snap-strip::-webkit-scrollbar {
+  height: 8px;
+}
+.snap-strip::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+.snap-strip .shot {
+  scroll-snap-align: center;
+}
+
+/* =========================
    Cards & grids
 ========================= */
 
