@@ -293,6 +293,12 @@ a:hover {
    text-align: center;
 }
 
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
 .pill {
   display: inline-block;
   padding: 6px 12px;
