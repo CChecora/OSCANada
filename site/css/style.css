@@ -211,12 +211,6 @@ a:hover {
 .app-badges a:hover img {
   transform: translateY(-1px);
 }
-
-/* 🔧 TEMP debug — remove when happy */
-.app-badges img {
-  outline: 2px solid hotpink;
-}
-
 /* =========================
    Buttons
 ========================= */
