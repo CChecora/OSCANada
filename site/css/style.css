@@ -175,7 +175,7 @@ a:hover {
 
 .app-badges {
   display: flex;
-  justify-content: center;   /* center as a group */
+  justify-content: flex-start;   /* center as a group */
   align-items: center;       /* vertical alignment */
   gap: 16px;
   margin-top: 24px;
@@ -300,7 +300,7 @@ a:hover {
 
 .hero-cta {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 32px;
 }
 
