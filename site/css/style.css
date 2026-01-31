@@ -523,3 +523,21 @@ a:hover {
   }
 }
 
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    margin-top: 32px;
+  }
+
+  .shot {
+    height: 420px;
+  }
+
+  .shot-marquee {
+    max-width: 360px;
+  }
+}
+
