@@ -117,5 +117,25 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+  <script>
+  (function () {
+    const strip = document.querySelector(".snap-strip");
+    if (!strip) return;
+
+    const shots = Array.from(strip.querySelectorAll(".shot"));
+    if (shots.length === 0) return;
+
+    let i = 0;
+
+    // Start by centering the first image
+    shots[0].scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+
+    setInterval(() => {
+      i = (i + 1) % shots.length;
+      shots[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }, 2500);
+  })();
+</script>
+
 </body>
 </html>
