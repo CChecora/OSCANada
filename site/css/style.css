@@ -152,7 +152,6 @@ a:hover {
   font-size: 1.4rem;   /* try 1.3–1.6rem */
   font-weight: 800;
   letter-spacing: 0.3px;
-   outline: 2px solid hotpink;
 }
 
 .nav-inner {
@@ -269,9 +268,9 @@ a:hover {
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
-.app-badges { outline: 2px solid yellow; } */
+.app-badges { outline: 2px solid yellow; } 
 .shots-viewport { outline: 4px solid hotpink; }
-.shots-track { outline: 4px solid lime; }
+.shots-track { outline: 4px solid lime; } */
 
 
 /* =========================
