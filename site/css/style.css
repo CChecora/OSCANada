@@ -610,6 +610,7 @@ a:hover {
 .about h2 {
   text-align: center;
   margin-bottom: 28px;
+   color: #414c77; 
 }
 
 .about-photos {
@@ -730,6 +731,7 @@ a:hover {
 
 .press h2 {
   margin-bottom: 8px;
+   color: #414c77; 
 }
 
 .press-note {
