@@ -497,12 +497,6 @@ a:hover {
   }
 }
 
-@media (min-width: 701px) {
-  .about-photo:first-child {
-    margin-top: 12px;   /* half of 24px */
-  }
-}
-
 /* =========================
   Carousel 
 ========================= */
@@ -597,7 +591,8 @@ a:hover {
   max-width: 960px;
   margin: 0 auto 22px;
    position: relative;
-   align-items: start;
+   /* align-items: start; */
+   align-items: center;
 }
 
 .about-photo {
@@ -649,6 +644,13 @@ a:hover {
   color: var(--muted);
   font-size: 1.05rem;
   margin: 0 0 14px;
+}
+
+@media (min-width: 701px) {
+  .about-photo:last-child {
+    margin-top: 0;         /* remove stagger */
+    margin-left: -48px;    /* keep overlap */
+  }
 }
 
 @media (max-width: 700px) {
