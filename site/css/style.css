@@ -686,10 +686,13 @@ a:hover {
   margin-bottom: 8px;
 }
 
-.press-sub {
-   margin: 0 auto 36px;
+.press-note {
+  margin: 36px auto 0;
   max-width: 620px;
   color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Grid */
