@@ -518,9 +518,11 @@ a:hover {
     padding: 24px 0 32px;
   }
   .value-card {
-    aspect-ratio: auto;       
-    padding: 14px 12px;       
+     aspect-ratio: auto;
+    padding: 14px 12px;
     justify-content: flex-start;
+    align-items: flex-start;   
+    text-align: left; 
   }
     .value-card h3 {
     font-size: 1.25rem;
