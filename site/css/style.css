@@ -679,6 +679,7 @@ a:hover {
 
 .press {
   padding: 72px 0;
+   text-align: center;
 }
 
 .press h2 {
@@ -686,7 +687,8 @@ a:hover {
 }
 
 .press-sub {
-  margin-bottom: 32px;
+   margin: 0 auto 36px;
+  max-width: 620px;
   color: var(--muted);
 }
 
@@ -705,9 +707,9 @@ a:hover {
   justify-content: center;
   height: 96px;              /* 🔑 equal visual height */
   padding: 12px;
-  background: #fff;
-  border: 1px solid var(--border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: transparent;
+  border: none;
+  transition: transform 0.18s ease-out;
 }
 
 /* Logo itself */
@@ -716,16 +718,20 @@ a:hover {
   max-width: 100%;
   object-fit: contain;      /* 🔑 prevents cropping */
   display: block;
-    filter: grayscale(100%);
   opacity: 0.85;
 }
 
 /* Hover polish */
 .press-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-   filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+
+.press-item:hover img {
   opacity: 1;
+}
+.press-item:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
 }
 
 /* Mobile */
