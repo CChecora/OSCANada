@@ -475,8 +475,9 @@ a:hover {
 }
 
 /* =========================
-  Carousel
+  Carousel (no-flicker)
 ========================= */
+
 .shots {
   padding: 24px 0 64px;
 }
@@ -490,16 +491,26 @@ a:hover {
 /* The moving row */
 .shots-track {
   display: flex;
-  flex-wrap: nowrap;        /* IMPORTANT: never wrap to a new line */
-  gap: 18px;
+  flex-wrap: nowrap;
   width: max-content;
-  animation: shots-scroll 36s linear infinite;
   will-change: transform;
+
+  /* JS will set this to the exact width of ONE set */
+  --scroll-distance: 1000px;
+
+  animation: shots-scroll 36s linear infinite;
+}
+
+/* A single set of screenshots */
+.shots-set {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
 }
 
 /* Each screenshot */
 .shot {
-  flex: 0 0 auto;           /* IMPORTANT: don't shrink/wrap */
+  flex: 0 0 auto;
   height: 520px;
   width: auto;
   border-radius: 28px;
@@ -509,11 +520,30 @@ a:hover {
   display: block;
 }
 
+/* Pixel-perfect loop (no -50% guessing) */
 @keyframes shots-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(calc(-1 * var(--scroll-distance)), 0, 0); }
 }
 
+/* Pause on hover */
+.shots-viewport:hover .shots-track {
+  animation-play-state: paused;
+}
+
+/* Help Safari/GPU reduce flicker */
+.shots-track,
+.shot {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Mobile sizing */
 @media (max-width: 600px) {
   .shot { height: 420px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .shots-track { animation: none; }
 }
