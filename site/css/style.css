@@ -475,66 +475,53 @@ a:hover {
 }
 
 /* =========================
-  Carousel (no-flicker)
+  Carousel 
 ========================= */
+.shots {
+  padding: 24px 0 64px;
+}
 
-/* The moving row */
+.shots-viewport {
+  overflow: hidden;
+  width: 100%;
+  /* helps Safari isolate painting */
+  contain: paint;
+}
+
 .shots-track {
   display: flex;
   flex-wrap: nowrap;
   width: max-content;
   will-change: transform;
-
-  /* JS will set this precisely */
-  --scroll-distance: 0px;
-
-  /* IMPORTANT: don't animate until ready */
-  animation: none;
+  transform: translate3d(0,0,0);
 }
 
-/* Turn animation on only when JS says it's ready */
-.shots-track.is-ready {
-  animation: shots-scroll 36s linear infinite;
-}
-
-/* A single set of screenshots */
 .shots-set {
   display: flex;
   flex-wrap: nowrap;
   gap: 18px;
-
-  /* ✅ creates the missing space between last and first */
-  padding-right: 18px;
+  padding-right: 18px; /* space between last and first */
 }
 
-/* Each screenshot */
 .shot {
   flex: 0 0 auto;
   height: 520px;
   width: auto;
+  display: block;
+
   border-radius: 28px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   background: #fff;
-  display: block;
-}
 
-@keyframes shots-scroll {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(calc(-1 * var(--scroll-distance)), 0, 0); }
-}
-
-/* Pause on hover */
-.shots-viewport:hover .shots-track.is-ready {
-  animation-play-state: paused;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 600px) {
   .shot { height: 420px; }
 }
 
-/* optional Safari calm-down */
-.shots-track, .shot {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+@media (prefers-reduced-motion: reduce) {
+  .shots-track { transform: none !important; }
 }
