@@ -598,6 +598,9 @@ a:hover {
    transform-origin: center;
   transition: transform 0.3s ease;
   background: #fff;
+   height: auto;
+  min-height: 0;
+  padding-bottom: 0;
 }
 
 .about-photo { outline: 3px solid lime; }     /* container */
