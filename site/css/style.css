@@ -491,6 +491,12 @@ a:hover {
   }
 }
 
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 /* =========================
   Carousel 
 ========================= */
