@@ -119,70 +119,88 @@
   </script>
 
  <script>
-  (function () {
-    const viewport = document.querySelector('.shots-viewport');
-    const track = document.querySelector('.shots-track');
-    const set = document.querySelector('.shots-set');
-    if (!viewport || !track || !set) return;
+(function () {
+  const viewport = document.querySelector('.shots-viewport');
+  const track = document.querySelector('.shots-track');
+  const set = document.querySelector('.shots-set');
+  if (!viewport || !track || !set) return;
 
-    // Clone once for seamless loop
-    const clone = set.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    clone.querySelectorAll('img').forEach(img => img.alt = '');
-    track.appendChild(clone);
+  // Clone once to create an endless belt
+  const clone = set.cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  clone.querySelectorAll('img').forEach(img => img.alt = '');
+  track.appendChild(clone);
 
-    function computeAndStart() {
-      // includes padding-right we added (so gap between sets is counted)
-      const distance = set.scrollWidth;
-      track.style.setProperty('--scroll-distance', distance + 'px');
+  let distance = 0;     // px width of one set
+  let x = 0;            // current offset
+  let lastT = null;
+  let paused = false;
 
-      // start animation only after distance is correct
-      track.classList.add('is-ready');
+  // Speed control: px per second
+  const speed = 60;     // try 45 (slower) to 80 (faster)
+
+  function computeDistance() {
+    distance = set.scrollWidth;  // includes padding-right gap
+  }
+
+  function tick(t) {
+    if (lastT === null) lastT = t;
+    const dt = (t - lastT) / 1000;
+    lastT = t;
+
+    if (!paused && distance > 0) {
+      x += speed * dt;
+
+      // Wrap seamlessly (never "reset" animation, so Safari won't flash)
+      if (x >= distance) x -= distance;
+
+      track.style.transform = `translate3d(${-x}px, 0, 0)`;
     }
 
-    // Wait for all images to be loaded before measuring
-    const imgs = track.querySelectorAll('img');
-    let loaded = 0;
+    requestAnimationFrame(tick);
+  }
 
-    imgs.forEach(img => {
-      if (img.complete) {
-        loaded++;
-        if (loaded === imgs.length) computeAndStart();
-      } else {
-        img.addEventListener('load', () => {
-          loaded++;
-          if (loaded === imgs.length) computeAndStart();
-        });
-      }
-    });
+  // Wait for images so measurements are correct
+  const imgs = track.querySelectorAll('img');
+  let loaded = 0;
 
-    // Recompute on resize (mobile rotations etc.)
-    window.addEventListener('resize', () => {
-      if (!track.classList.contains('is-ready')) return;
-      const distance = set.scrollWidth;
-      track.style.setProperty('--scroll-distance', distance + 'px');
-    });
+  function startIfReady() {
+    loaded++;
+    if (loaded >= imgs.length) {
+      computeDistance();
+      requestAnimationFrame(tick);
+    }
+  }
 
-    // Pause on touchstart + resume after a moment
-    let resumeTimeout;
-    const pause = () => {
-      if (!track.classList.contains('is-ready')) return;
-      track.style.animationPlayState = 'paused';
-      clearTimeout(resumeTimeout);
-    };
-    const resume = () => {
-      if (!track.classList.contains('is-ready')) return;
-      clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => {
-        track.style.animationPlayState = 'running';
-      }, 1200);
-    };
+  imgs.forEach(img => {
+    if (img.complete) startIfReady();
+    else img.addEventListener('load', startIfReady);
+  });
 
-    viewport.addEventListener('touchstart', pause, { passive: true });
-    viewport.addEventListener('touchend', resume);
-    viewport.addEventListener('mouseenter', pause);
-    viewport.addEventListener('mouseleave', resume);
-  })();
+  // Recompute on resize (important for responsive height changes)
+  window.addEventListener('resize', () => {
+    computeDistance();
+    x = x % (distance || 1);
+  });
+
+  // Pause on hover + pause on touchstart
+  let resumeTimeout;
+
+  const pause = () => {
+    paused = true;
+    clearTimeout(resumeTimeout);
+  };
+
+  const resume = () => {
+    clearTimeout(resumeTimeout);
+    resumeTimeout = setTimeout(() => { paused = false; }, 1200);
+  };
+
+  viewport.addEventListener('mouseenter', pause);
+  viewport.addEventListener('mouseleave', resume);
+  viewport.addEventListener('touchstart', pause, { passive: true });
+  viewport.addEventListener('touchend', resume);
+})();
 </script>
 
 </body>
