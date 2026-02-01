@@ -568,7 +568,67 @@ a:hover {
   .shot { height: 420px; }
 }
 
-/*
-@media (prefers-reduced-motion: reduce) {
-  .shots-track { transform: none !important; }
-} */
+/* =========================
+  About
+========================= */
+
+.about {
+  padding: 72px 0;
+  background: #fff;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.about-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 960px;
+  margin: 0 auto 22px;
+}
+
+.about-photo {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 320px;         /* adjust if you want */
+  object-fit: cover;
+  display: block;
+}
+
+.about-text {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 14px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .about-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo img {
+    height: 260px;
+  }
+
+  .about-text {
+    text-align: left; /* optional: many people prefer left text on mobile */
+  }
+}
