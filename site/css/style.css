@@ -520,7 +520,7 @@ a:hover {
     aspect-ratio: auto; /* don’t force square on mobile */
       height: auto;
     min-height: 0;
-     padding: 16px 14px;
+     padding: 12px 10px;;
   }
     .value-card h3 {
     font-size: 1.3rem;
