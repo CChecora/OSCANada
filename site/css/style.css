@@ -349,6 +349,7 @@ a:hover {
 .hero-title {
   color: #414C77;
   font-weight: 800;
+   letter-spacing: -0.01em;
 }
 
 .pill {
