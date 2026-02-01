@@ -589,6 +589,7 @@ a:hover {
   max-width: 960px;
   margin: 0 auto 22px;
    position: relative;
+   align-items: start;
 }
 
 .about-photo {
