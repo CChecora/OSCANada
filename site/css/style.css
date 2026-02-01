@@ -38,6 +38,10 @@ body {
   line-height: 1.55;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* =========================
    Layout helpers
 ========================= */
@@ -486,6 +490,9 @@ a:hover {
   width: 100%;
   /* helps Safari isolate painting */
   contain: paint;
+  
+   /* Prevent iOS horizontal page-pan */
+  touch-action: pan-y;
 
    /* subtle edge fade */
   mask-image: linear-gradient(
