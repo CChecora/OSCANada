@@ -600,6 +600,9 @@ a:hover {
   background: #fff;
 }
 
+.about-photo { outline: 3px solid lime; }     /* container */
+.about-photo img { outline: 3px solid hotpink; }  /* image */
+
 /* Left photo: tilt slightly left */
 .about-photo:first-child {
   transform: rotate(-2deg);
