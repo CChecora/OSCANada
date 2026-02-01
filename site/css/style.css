@@ -588,6 +588,7 @@ a:hover {
   gap: 18px;
   max-width: 960px;
   margin: 0 auto 22px;
+   position: relative;
 }
 
 .about-photo {
@@ -602,11 +603,14 @@ a:hover {
 /* Left photo: tilt slightly left */
 .about-photo:first-child {
   transform: rotate(-2deg);
+   z-index: 2;
 }
 
 /* Right photo: tilt slightly right */
 .about-photo:last-child {
   transform: rotate(2deg);
+   margin-left: -48px;   /* overlap amount */
+  margin-top: 24px;
 }
 
 /* Let images keep their natural proportions */
@@ -639,6 +643,11 @@ a:hover {
 
   .about-photo {
     transform: none !important;
+  }
+
+   .about-photo:last-child {
+    margin-left: 0;
+    margin-top: 18px;
   }
 
   .about-photo img {
