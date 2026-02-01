@@ -549,6 +549,7 @@ a:hover {
   .shot { height: 420px; }
 }
 
+/*
 @media (prefers-reduced-motion: reduce) {
   .shots-track { transform: none !important; }
-}
+} */
