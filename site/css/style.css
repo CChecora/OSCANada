@@ -497,6 +497,12 @@ a:hover {
   }
 }
 
+@media (min-width: 701px) {
+  .about-photo:first-child {
+    margin-top: 12px;   /* half of 24px */
+  }
+}
+
 /* =========================
   Carousel 
 ========================= */
@@ -567,6 +573,8 @@ a:hover {
 @media (max-width: 600px) {
   .shot { height: 420px; }
 }
+
+
 
 /* =========================
   About
