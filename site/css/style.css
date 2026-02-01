@@ -491,15 +491,15 @@ a:hover {
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 5%,
+     black 95%,
     transparent
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 5%,
+     black 95%,
     transparent
   );
 }
