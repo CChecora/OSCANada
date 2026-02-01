@@ -742,6 +742,11 @@ a:hover {
   .press-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+    /* If the last item is alone, center it */
+  .press-grid > .press-item:last-child {
+    grid-column: 1 / -1;     /* span both columns */
+    justify-self: center;    /* center within the row */
+  }
 
   .press-item {
     height: 84px;
