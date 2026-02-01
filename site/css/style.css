@@ -802,25 +802,30 @@ a:hover {
   box-shadow: var(--shadow-sm);
   border-radius: 14px;
   padding: 20px 18px;
-  text-align: left;
 
-  /* makes them feel square-ish */
-  aspect-ratio: 1 / 1;
-
+   /* Center content */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* makes them feel square-ish */
+  aspect-ratio: 1 / 1;
 }
 
 .value-card h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.25rem;      
+  font-weight: 800;        
+  color: #172E5E;         
+  margin-bottom: 10px;
 }
 
 .value-card p {
   font-size: 0.95rem;
   color: var(--muted);
   margin: 0;
+   max-width: 240px; 
 }
 
 /* Hover polish */
