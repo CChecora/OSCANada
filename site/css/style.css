@@ -593,8 +593,20 @@ a:hover {
 .about-photo {
   margin: 0;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+   transform-origin: center;
+  transition: transform 0.3s ease;
   background: #fff;
+}
+
+/* Left photo: tilt slightly left */
+.about-photo:first-child {
+  transform: rotate(-2deg);
+}
+
+/* Right photo: tilt slightly right */
+.about-photo:last-child {
+  transform: rotate(2deg);
 }
 
 /* Let images keep their natural proportions */
