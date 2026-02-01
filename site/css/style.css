@@ -166,9 +166,19 @@ a:hover {
 }
 
 .brand {
+   display: inline-flex;
+  align-items: center;
+  gap: 10px; 
   font-weight: 800;
   letter-spacing: 0.2px;
   color: var(--text);
+   text-decoration: none;
+}
+
+.brand-icon {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -475,6 +485,9 @@ a:hover {
   }
    .nav .brand {
     font-size: 1.25rem;
+  }
+   .brand-icon {
+    height: 22px;
   }
 }
 
