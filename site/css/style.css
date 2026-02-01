@@ -486,6 +486,22 @@ a:hover {
   width: 100%;
   /* helps Safari isolate painting */
   contain: paint;
+
+   /* subtle edge fade */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
 }
 
 .shots-track {
@@ -516,6 +532,10 @@ a:hover {
 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.shot:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 600px) {
