@@ -607,6 +607,13 @@ a:hover {
   padding-bottom: 0;
 }
 
+.about-photo figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 /* Left photo: tilt slightly left */
 .about-photo:first-child {
   transform: rotate(-2deg);
