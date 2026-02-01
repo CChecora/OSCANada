@@ -640,7 +640,7 @@ a:hover {
 
 .about-text {
   max-width: 860px;
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: center;
 }
 
@@ -677,6 +677,7 @@ a:hover {
 
   .about-text {
     text-align: left; /* optional: many people prefer left text on mobile */
+     margin-top: 28px;
   }
 }
 
