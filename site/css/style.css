@@ -612,9 +612,12 @@ a:hover {
 /* Let images keep their natural proportions */
 .about-photo img {
   width: 100%;
-  height: auto;        /* <-- key change */
-  object-fit: initial;/* <-- prevents cropping */
+  height: auto;        
   display: block;
+}
+
+.about-photo:hover {
+  transform: rotate(0deg) translateY(-4px);
 }
 
 .about-text {
@@ -629,14 +632,17 @@ a:hover {
   margin: 0 0 14px;
 }
 
-/* Mobile */
 @media (max-width: 700px) {
   .about-photos {
     grid-template-columns: 1fr;
   }
 
+  .about-photo {
+    transform: none !important;
+  }
+
   .about-photo img {
-    height: 260px;
+    height: auto;   /* keep natural proportions */
   }
 
   .about-text {
