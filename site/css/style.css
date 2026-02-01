@@ -716,12 +716,16 @@ a:hover {
   max-width: 100%;
   object-fit: contain;      /* 🔑 prevents cropping */
   display: block;
+    filter: grayscale(100%);
+  opacity: 0.85;
 }
 
 /* Hover polish */
 .press-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+   filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* Mobile */
