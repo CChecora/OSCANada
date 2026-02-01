@@ -664,6 +664,7 @@ a:hover {
 @media (max-width: 700px) {
   .about-photos {
     grid-template-columns: 1fr;
+     margin: 40px auto 48px;
   }
 
   .about-photo {
