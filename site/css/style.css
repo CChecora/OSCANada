@@ -866,8 +866,9 @@ a:hover {
 }
 
 .download h2 {
-  color: #414c77;      /* your brand blue */
+  color: #414c77;      
   margin-bottom: 8px;
+   text-align: center;
 }
 
 .download-sub {
