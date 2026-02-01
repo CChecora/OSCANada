@@ -601,17 +601,21 @@ a:hover {
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
    transform-origin: center;
   transition: transform 0.3s ease;
-  background: #fff;
-   height: auto;
-  min-height: 0;
-  padding-bottom: 0;
+    position: relative;      /* 🔑 anchor for caption */
+  display: inline-block;
+  background: transparent;
 }
 
 .about-photo figcaption {
-  margin-top: 10px;
+  position: absolute;
+  bottom: -30px;           /* hangs below the photo */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 0.9rem;
   color: var(--muted);
   text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 /* Left photo: tilt slightly left */
@@ -664,6 +668,11 @@ a:hover {
 
   .about-photo {
     transform: none !important;
+  }
+
+   .about-photo figcaption {
+    bottom: -22px;
+    font-size: 0.85rem;
   }
 
    .about-photo:last-child {
