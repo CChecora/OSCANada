@@ -346,6 +346,11 @@ a:hover {
   align-items: center;
 }
 
+.hero-title {
+  color: #414C77;
+  font-weight: 800;
+}
+
 .pill {
   display: inline-block;
   padding: 6px 12px;
