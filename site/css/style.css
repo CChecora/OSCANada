@@ -25,6 +25,12 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -505,13 +511,15 @@ a:hover {
     height: 22px;
   }
    .value-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important; /* remove important later */
   }
    .value-cards {
     padding: 24px 0 32px;
   }
   .value-card {
     aspect-ratio: auto; /* don’t force square on mobile */
+      height: auto;
+    min-height: 0;
   }
     .value-card h3 {
     font-size: 1.3rem;
