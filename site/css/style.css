@@ -862,6 +862,7 @@ a:hover {
 .download {
   padding: 72px 0;
   text-align: center;
+   border-top: 1px solid var(--border);
 }
 
 .download h2 {
