@@ -464,80 +464,7 @@ a:hover {
   font-size: 1.05rem;
 }
 
-/* =========================
-   Mobile adjustments
-========================= */
 
-@media entries: @media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .grid2,
-  .grid3 {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-links {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-   .value-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .lead-list {
-    font-size: 1.15rem;
-  }
-   .app-badges {
-    flex-direction: column;
-    gap: 14px;
-  }
-   .nav .brand {
-    font-size: 1.35rem;
-  }
-   .brand-icon {
-    height: 22px;
-  }
-   .value-grid {
-    grid-template-columns: 1fr;
-      gap: 12px;
-  }
-   .value-cards {
-    padding: 24px 0 32px;
-  }
-  .value-card {
-     aspect-ratio: auto;
-    padding: 14px 12px;
-    justify-content: flex-start;
-    align-items: flex-start;   
-    text-align: left; 
-  }
-    .value-card h3 {
-    font-size: 1.25rem;
-  }
-   .value-card p {
-    max-width: none;           
-  }
-   
-}
-
-@media (max-width: 700px) {
-  .nav-links {
-    display: none;
-  }
-}
 
 /* =========================
   Carousel 
@@ -889,4 +816,79 @@ a:hover {
   max-width: 560px;
   margin: 0 auto 28px;
   color: var(--muted);
+}
+
+/* =========================
+   Mobile adjustments
+========================= */
+
+@media entries: @media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .grid2,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+   .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .lead-list {
+    font-size: 1.15rem;
+  }
+   .app-badges {
+    flex-direction: column;
+    gap: 14px;
+  }
+   .nav .brand {
+    font-size: 1.35rem;
+  }
+   .brand-icon {
+    height: 22px;
+  }
+   .value-grid {
+    grid-template-columns: 1fr;
+      gap: 12px;
+  }
+   .value-cards {
+    padding: 24px 0 32px;
+  }
+  .value-card {
+     aspect-ratio: auto;
+    padding: 14px 12px;
+    justify-content: flex-start;
+    align-items: flex-start;   
+    text-align: left; 
+  }
+    .value-card h3 {
+    font-size: 1.25rem;
+  }
+   .value-card p {
+    max-width: none;           
+  }
+   
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
 }
