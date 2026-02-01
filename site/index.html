@@ -118,23 +118,41 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-  <script>
+ <script>
   (function () {
-    const strip = document.querySelector(".snap-strip");
-    if (!strip) return;
+    const track = document.querySelector('.shots-track');
+    const set = document.querySelector('.shots-set');
+    if (!track || !set) return;
 
-    const shots = Array.from(strip.querySelectorAll(".shot"));
-    if (shots.length === 0) return;
+    // Clone the set once for seamless looping
+    const clone = set.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.querySelectorAll('img').forEach(img => img.alt = '');
+    track.appendChild(clone);
 
-    let i = 0;
+    // Wait for images to load before measuring width
+    const images = track.querySelectorAll('img');
+    let loaded = 0;
 
-    // Start by centering the first image
-    shots[0].scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+    function computeScrollDistance() {
+      const distance = set.scrollWidth;
+      track.style.setProperty('--scroll-distance', distance + 'px');
+    }
 
-    setInterval(() => {
-      i = (i + 1) % shots.length;
-      shots[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    }, 2500);
+    images.forEach(img => {
+      if (img.complete) {
+        loaded++;
+        if (loaded === images.length) computeScrollDistance();
+      } else {
+        img.addEventListener('load', () => {
+          loaded++;
+          if (loaded === images.length) computeScrollDistance();
+        });
+      }
+    });
+
+    // Recalculate on resize
+    window.addEventListener('resize', computeScrollDistance);
   })();
 </script>
 
