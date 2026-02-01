@@ -511,19 +511,22 @@ a:hover {
     height: 22px;
   }
    .value-grid {
-    grid-template-columns: 1fr !important; /* remove important later */
+    grid-template-columns: 1fr;
+      gap: 12px;
   }
    .value-cards {
     padding: 24px 0 32px;
   }
   .value-card {
-    aspect-ratio: auto; /* don’t force square on mobile */
-      height: auto;
-    min-height: 0;
-     padding: 12px 10px;;
+    aspect-ratio: auto;       
+    padding: 14px 12px;       
+    justify-content: flex-start;
   }
     .value-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+  }
+   .value-card p {
+    max-width: none;           
   }
    
 }
