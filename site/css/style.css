@@ -818,10 +818,11 @@ a:hover {
 }
 
 .value-card h3 {
-  font-size: 1.25rem;      
-  font-weight: 800;        
-  color: #172E5E;         
+  font-size: 1.45rem;    
+  font-weight: 800;
+  color: #414c77;         
   margin-bottom: 10px;
+  line-height: 1.15;
 }
 
 .value-card p {
