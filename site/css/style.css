@@ -501,6 +501,9 @@ a:hover {
   .value-card {
     aspect-ratio: auto; /* don’t force square on mobile */
   }
+    .value-card h3 {
+    font-size: 1.3rem;
+  }
    
 }
 
