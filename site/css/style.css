@@ -153,9 +153,10 @@ a:hover {
 }
 
 .nav .brand {
-  font-size: 1.4rem;   /* try 1.3–1.6rem */
+  font-size: 1.8rem;  
   font-weight: 800;
   letter-spacing: 0.3px;
+   color: #414c77; 
 }
 
 .nav-inner {
@@ -498,7 +499,7 @@ a:hover {
     gap: 14px;
   }
    .nav .brand {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
    .brand-icon {
     height: 22px;
