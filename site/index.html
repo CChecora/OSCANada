@@ -120,39 +120,68 @@
 
  <script>
   (function () {
+    const viewport = document.querySelector('.shots-viewport');
     const track = document.querySelector('.shots-track');
     const set = document.querySelector('.shots-set');
-    if (!track || !set) return;
+    if (!viewport || !track || !set) return;
 
-    // Clone the set once for seamless looping
+    // Clone once for seamless loop
     const clone = set.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     clone.querySelectorAll('img').forEach(img => img.alt = '');
     track.appendChild(clone);
 
-    // Wait for images to load before measuring width
-    const images = track.querySelectorAll('img');
-    let loaded = 0;
-
-    function computeScrollDistance() {
+    function computeAndStart() {
+      // includes padding-right we added (so gap between sets is counted)
       const distance = set.scrollWidth;
       track.style.setProperty('--scroll-distance', distance + 'px');
+
+      // start animation only after distance is correct
+      track.classList.add('is-ready');
     }
 
-    images.forEach(img => {
+    // Wait for all images to be loaded before measuring
+    const imgs = track.querySelectorAll('img');
+    let loaded = 0;
+
+    imgs.forEach(img => {
       if (img.complete) {
         loaded++;
-        if (loaded === images.length) computeScrollDistance();
+        if (loaded === imgs.length) computeAndStart();
       } else {
         img.addEventListener('load', () => {
           loaded++;
-          if (loaded === images.length) computeScrollDistance();
+          if (loaded === imgs.length) computeAndStart();
         });
       }
     });
 
-    // Recalculate on resize
-    window.addEventListener('resize', computeScrollDistance);
+    // Recompute on resize (mobile rotations etc.)
+    window.addEventListener('resize', () => {
+      if (!track.classList.contains('is-ready')) return;
+      const distance = set.scrollWidth;
+      track.style.setProperty('--scroll-distance', distance + 'px');
+    });
+
+    // Pause on touchstart + resume after a moment
+    let resumeTimeout;
+    const pause = () => {
+      if (!track.classList.contains('is-ready')) return;
+      track.style.animationPlayState = 'paused';
+      clearTimeout(resumeTimeout);
+    };
+    const resume = () => {
+      if (!track.classList.contains('is-ready')) return;
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(() => {
+        track.style.animationPlayState = 'running';
+      }, 1200);
+    };
+
+    viewport.addEventListener('touchstart', pause, { passive: true });
+    viewport.addEventListener('touchend', resume);
+    viewport.addEventListener('mouseenter', pause);
+    viewport.addEventListener('mouseleave', resume);
   })();
 </script>
 
