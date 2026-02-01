@@ -855,3 +855,23 @@ a:hover {
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+/* =========================
+   Download Section
+========================= */
+
+.download {
+  padding: 72px 0;
+  text-align: center;
+  background: #f6f7fb; /* very light contrast, optional */
+}
+
+.download h2 {
+  color: #414c77;      /* your brand blue */
+  margin-bottom: 8px;
+}
+
+.download-sub {
+  max-width: 560px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+}
