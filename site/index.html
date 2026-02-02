@@ -325,9 +325,13 @@
   }
 
   imgs.forEach(img => {
-    if (img.complete) startIfReady();
-    else img.addEventListener('load', startIfReady);
-  });
+  if (img.complete) {
+    startIfReady();
+  } else {
+    img.addEventListener('load', startIfReady);
+    img.addEventListener('error', startIfReady); // 👈 add this line
+  }
+});
 
   // Recompute on resize (important for responsive height changes)
   window.addEventListener('resize', () => {
