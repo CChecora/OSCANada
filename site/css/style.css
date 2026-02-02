@@ -862,7 +862,7 @@ a:hover {
       align-items: flex-start;   
       text-align: left; 
       width: min(420px, 92vw); /* prevents full-width cards */
-      max-width: 420px;
+      aspect-ratio: 4 / 3;
   }
     .value-card h3 {
     font-size: 1.25rem;
