@@ -847,30 +847,38 @@ a:hover {
     .shot { 
        height: 420px;
    }
-   .value-grid {
-      grid-template-columns: 1fr;
-      gap: 12px;
-      justify-items: center;
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: center;
   }
-   .value-cards {
+
+  .value-cards {
     padding: 24px 0 32px;
   }
+
   .value-card {
-      aspect-ratio: auto;
-      padding: 14px 12px;
-      justify-content: flex-start;
-      align-items: flex-start;   
-      text-align: left; 
-      width: min(420px, 92vw); /* prevents full-width cards */
-      aspect-ratio: 4 / 3;
+    width: min(420px, 92vw);
+    aspect-ratio: 4 / 3;
+
+    /* center the content inside the tall card */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* give it breathing room */
+    padding: 22px 18px;
   }
-    .value-card h3 {
-    font-size: 1.25rem;
+
+  .value-card h3 {
+    font-size: 1.35rem;
+    margin: 0 0 10px;
   }
-   .value-card p {
-    max-width: none;           
-  }
-   
+
+  .value-card p {
+    margin: 0;
+    max-width: 28ch; /* keeps the text compact */
+  }   
 }
 
 /* =========================
