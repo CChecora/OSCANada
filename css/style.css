@@ -70,7 +70,7 @@ html, body {
  background: #ffffff;
   color: var(--text);
   text-align: center;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border); 
 }
 
 h1, h2, h3 {
@@ -723,6 +723,55 @@ a:hover {
 }
 
 /* =========================
+   Policy / Terms page
+========================= */
+
+.policy {
+  padding: 48px 0 72px;
+}
+
+/* constrain text width + add side breathing room */
+.policy-inner {
+  max-width: 860px;     /* pick one width; 860 is a nice readable max */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header row that contains title + language switch */
+.policy-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+/* blue section headings (Privacy Policy, Terms of Service, etc.) */
+.policy-title {
+  color: #414c77;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin: 0;            /* important so the header row aligns neatly */
+}
+
+/* language switch link on the right */
+.lang-switch {
+  font-weight: 600;
+  text-decoration: none;
+  color: #b4232a;       /* your brand red (change if you want) */
+  white-space: nowrap;
+}
+
+.lang-switch:hover {
+  text-decoration: underline;
+}
+
+/* space between the header row and the list/content */
+.policy-content {
+  margin-top: 12px;
+}
+
+/* =========================
    Footer
 ========================= */
 
@@ -903,11 +952,11 @@ a:hover {
 
 /* =========================
    Debug
-========================= */
+========================= 
 
 .hero-copy { outline: 2px solid hotpink; }
 .hero-cta { outline: 2px solid orange; }
 .lead-list { outline: 2px solid deepskyblue; }
 .app-badges { outline: 2px solid yellow; } 
-.shots-viewport { outline: 4px solid hotpink; }
+.shots-viewport { outline: 4px solid hotpink; } */
 
