@@ -428,6 +428,10 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.policy .card {
+  margin-bottom: 48px;
+}
+
 /* =========================
    Value Cards
 ========================= */
@@ -811,6 +815,18 @@ a:hover {
   font-size: 1.05rem;
 }
 
+/* =========================
+   Backlinks
+========================= */
+.back-link {
+  color: #000;             
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
 
 /* =========================
    Mobile adjustments
