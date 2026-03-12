@@ -375,5 +375,33 @@
 })();
 </script>
 
+<script>
+(function () {
+
+  // If user previously chose French and is on English homepage
+  if (localStorage.getItem("lang") === "fr" &&
+      window.location.pathname === "/") {
+    window.location.href = "/fr/";
+  }
+
+  // When clicking FR link
+  const frLink = document.querySelector('a[href="/fr/"]');
+  if (frLink) {
+    frLink.addEventListener("click", function () {
+      localStorage.setItem("lang", "fr");
+    });
+  }
+
+  // When clicking EN link
+  const enLink = document.querySelector('a[href="/"]');
+  if (enLink) {
+    enLink.addEventListener("click", function () {
+      localStorage.setItem("lang", "en");
+    });
+  }
+
+})();
+</script>
+
 </body>
 </html>
